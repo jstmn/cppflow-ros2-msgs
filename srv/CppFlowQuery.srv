@@ -1,0 +1,24 @@
+# header is not currently used.
+# std_msgs/Header header
+
+# The name of the base link
+string base_frame
+
+
+# The name of the end effector link
+string end_effector_frame
+
+# The robot name in the Jrl package (see https://github.com/jstmn/jrl). Needs to match whatever the configured value is, which is set by a CppFlowEnvironentConfig message
+string jrl_robot_name
+
+# Array of planning problems. CppFlow will solve all of them in parallel.
+CppFlowProblem[] problems
+
+---
+
+trajectory_msgs/JointTrajectory[] trajectories
+bool[] success
+string[] errors
+
+bool is_malformed_query
+string query_format_error

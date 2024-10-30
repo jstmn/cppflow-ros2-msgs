@@ -1,0 +1,21 @@
+# header is not currently used
+# std_msgs/Header header
+
+# obstacles
+visualization_msgs/MarkerArray obstacles
+
+# The name of the base link
+string base_frame
+
+# The name of the end effector link
+string end_effector_frame
+
+# The robot name in the Jrl package (see https://github.com/jstmn/jrl)
+string jrl_robot_name
+
+
+---
+# response
+
+bool success
+string error
