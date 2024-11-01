@@ -21,4 +21,4 @@ bool[] success
 string[] errors
 
 bool is_malformed_query
-string query_format_error
+string malformed_query_error
