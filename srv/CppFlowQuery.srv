@@ -4,7 +4,6 @@
 # The name of the base link
 string base_frame
 
-
 # The name of the end effector link
 string end_effector_frame
 
@@ -13,6 +12,16 @@ string jrl_robot_name
 
 # Array of planning problems. CppFlow will solve all of them in parallel.
 CppFlowProblem[] problems
+
+# Optionally specify the initial joint configuration. Note that only the positional element of the configuration will be used - the velocity and effort elements will be ignored
+bool initial_configuration_is_set
+sensor_msgs/JointState initial_configuration
+
+# Specify the maximum allowed planning time
+float64 max_planning_time_sec
+
+# Verbosity. 0: No output, 1: Info, 2. Debug, 3. Extreme debug
+int32 verbosity
 
 ---
 

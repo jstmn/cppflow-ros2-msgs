@@ -22,6 +22,7 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(trajectory_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 set(msg_files
   "msg/CppFlowProblem.msg"
@@ -31,7 +32,7 @@ set(msg_files
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
-  DEPENDENCIES std_msgs geometry_msgs trajectory_msgs visualization_msgs
+  DEPENDENCIES std_msgs geometry_msgs trajectory_msgs visualization_msgs sensor_msgs
 )
 
 ament_package()
