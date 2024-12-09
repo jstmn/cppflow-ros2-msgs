@@ -20,6 +20,15 @@ sensor_msgs/JointState initial_configuration
 # Specify the maximum allowed planning time
 float64 max_planning_time_sec
 
+# Specify whether to plan with anytime mode or now. When enabled, the planner will continue optimizing until max_planning_time_sec seconds have elapsed or no more progress is detected. If disabled, the first valid plan will be returned.
+bool anytime_mode_enabled 
+
+# Specify the maximum allowed reference path tracking and smoothness error. See "CppFlow: Generative Inverse Kinematics for Efficient and Robust Cartesian Path Planning" for a description of mjac
+float64 max_allowed_position_error_cm
+float64 max_allowed_rotation_error_deg
+float64 max_allowed_mjac_deg
+float64 max_allowed_mjac_cm
+
 # Verbosity. 0: No output, 1: Info, 2. Debug, 3. Extreme debug
 int32 verbosity
 
